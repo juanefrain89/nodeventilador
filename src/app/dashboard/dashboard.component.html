@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- ion-menu-button con un icono personalizado -->
+      <ion-menu-button autoHide="false">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      modficar uso
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <marquee behavior="scroll" direction="left" class="marquee">opciones</marquee>
+  
+  <div class="control-container">
+ 
+    <ion-button class="control-button top" expand="full">1er Velocidad</ion-button>
+
+    <!-- Botón Prender (derecha) -->
+    <ion-button class="control-button right" expand="full">2da velocidad</ion-button>
+
+    <!-- Botón Apagar (izquierda) -->
+    <ion-button class="control-button left" expand="full">3er velocidad</ion-button>
+
+    <!-- Botón Programar (centro) -->
+    <ion-button class="control-button center" expand="full">cuarta velocidad</ion-button>
+
+    <!-- Botón 3er velocidad (abajo) -->
+    <ion-button class="control-button bottom" expand="full">onn/off</ion-button>
+    <div class="nada">
+      <h1 class="h1">apagar despues de </h1>
+      <input [(ngModel)]="minutos" placeholder="min" class="input" type="number">
+      <ion-button class="btn" (click)="alerta()">aceptar</ion-button>
+    </div>
+   
+  </div>
+  <div class="programar-container">
+    <h1 class="programar-title">Programar cuando el clima esté a</h1>
+    <div class="input-container">
+      <input type="number"  (ngModelChange)="validarTemperatura()" min="0" max="60"  [(ngModel)]="temperatura" placeholder="Ingresa la temperatura" class="programar-input">
+    </div>
+    <ion-button class="programar-btn" >Aceptar</ion-button>
+  </div>
+  
+</ion-content>
+

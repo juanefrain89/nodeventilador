@@ -1,0 +1,26 @@
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #dcdcdc;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .custom-table th {
+    background-color: #3880ff; /* Color primario de Ionic */
+    color: #fff;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .custom-table tbody tr {
+    transition: background-color 0.3s;
+  }
+  

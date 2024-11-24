@@ -1,0 +1,47 @@
+.chart-container {
+    width: 90%;
+    height: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ion-content {
+    --background: #ffffff;
+    padding: 15px;
+  }
+  
+  ion-header {
+    --background: #007acc;
+    --color: #ffffff;
+    text-align: center;
+  }
+  
+  ion-toolbar {
+    --padding-start: 10px;
+  }
+  
+  ion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .chart-container {
+      height: 300px;
+    }
+  
+    ion-title {
+      font-size: 1.2rem;
+    }
+  }
+  

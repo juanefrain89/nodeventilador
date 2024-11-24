@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- ion-menu-button con un icono personalizado -->
+      <ion-menu-button autoHide="false">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      graficos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chart-container">
+    <canvas baseChart
+            [type]="chartType"
+            [data]="chartData"
+            [options]="chartOptions">
+    </canvas>
+  </div>
+  <app-circular></app-circular>
+</ion-content>
