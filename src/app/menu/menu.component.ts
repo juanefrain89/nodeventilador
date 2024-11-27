@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular'; // Si estás usando Ionic para la navegación
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -8,14 +8,18 @@ import { NavController } from '@ionic/angular'; // Si estás usando Ionic para l
 })
 export class MenuComponent {
 
-  constructor(private navController: NavController) {}
-
-  // Método para navegar a la página de inicio
-  openHome() {
-    this.navController.navigateRoot('/home'); // Navega a la ruta /home
+  constructor(private navController: NavController, private router: Router) {}
+  logout(){
+    this.router.navigate(['/login']);
+   
   }
 
-  // Método para navegar a la página de ajustes
+
+  openHome() {
+    this.navController.navigateRoot('/home'); 
+  }
+
+  
   openSettings() {
     this.navController.navigateForward('/settings'); // Navega a la ruta /settings
   }

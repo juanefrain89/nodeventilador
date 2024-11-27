@@ -13,6 +13,7 @@ export class UsuariosComponent  implements OnInit {
    
   }
   arra: any[] = [];
+  id = localStorage.getItem("id")
   async showConfirmationAlert(id: any) {
     const alert = await this.alertController.create({
       header: 'Confirmación',
@@ -31,7 +32,7 @@ export class UsuariosComponent  implements OnInit {
             
             this.eliminar(id);
           }
-        }
+        } 
       ]
     });
 
@@ -59,8 +60,7 @@ actualizar(){
   this.ConsumoService.obtenerusuarios().subscribe(
     (datos)=>{
       this.arra = datos;
-      console.log(datos);
-      
+      console.log(datos);     
     },
     (error)=>{
       console.log(error);
@@ -74,8 +74,7 @@ actualizar(){
     this.ConsumoService.obtenerusuarios().subscribe(
       (datos)=>{
         this.arra = datos;
-        console.log(datos);
-        
+        console.log(datos);        
       },
       (error)=>{
         console.log(error);

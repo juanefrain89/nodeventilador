@@ -12,20 +12,24 @@ export class LoginComponent implements OnInit {
  
   constructor(private peticion : HttpClient, private router: Router) { }
   res: string = '';
+  id: any=""
+  errord :any=""
 enviardatos(){
   const datos={
     correo:this.email,
     contraseña:this.password
   }
-  this.peticion.post("http://localhost:4200/login", datos).subscribe(
+  this.peticion.post("https://mongod-a6jr.onrender.com/login", datos).subscribe(
     (respuesta: any) => {  // Usamos 'any' para evitar el error de tipo
       console.log(respuesta); 
       this.res = respuesta.id; 
       localStorage.setItem("id", this.res)
-      this.router.navigate(['/home']);
+       this.id = localStorage.getItem("id")
+      this.router.navigate(['/usuarios']);
     },
     (error)=>{
       console.log(error);
+      this.errord=error
       
     }
   )

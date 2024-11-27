@@ -21,7 +21,7 @@
       <table class="custom-table">
         <thead>
           <tr>
-            <th>ID</th>
+           
             <th>Correo</th>
             <th>Contraseña</th>
             <th>Acciones</th> <!-- Columna para los botones -->
@@ -29,7 +29,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of arra">
-            <td>{{ item.id }}</td>
+           
             <td>{{ item.correo }}</td>
             <td>{{ item['contraseña'] }}</td>
             <td>
@@ -49,4 +49,5 @@
       </table>
     </ion-card-content>
   </ion-card>
+  <h1>id == {{id}}</h1>
 </ion-content>

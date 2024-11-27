@@ -7,8 +7,8 @@ import { AlertController } from '@ionic/angular';
 })
 export class ConsumoService {
 
-  private apiUrl = 'http://localhost:4200/consumos'; // La URL de tu API
-usuarios ="http://localhost:4200/usuarios"
+  private apiUrl = 'https://mongod-a6jr.onrender.com/consumos'; 
+usuarios ="https://mongod-a6jr.onrender.com/usuarios"
   constructor(private http: HttpClient,) { }
   
 
@@ -18,7 +18,7 @@ usuarios ="http://localhost:4200/usuarios"
 
   eliminar(id: string): Observable<any> {
     
-    const url = "http://localhost:4200/eliminar";  
+    const url = "https://mongod-a6jr.onrender.com/eliminar";  
     return this.http.post<any>(url,{ id });  
   }
 
